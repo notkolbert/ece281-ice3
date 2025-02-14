@@ -49,7 +49,7 @@ entity top_basys3 is
 		sw		:	in  std_logic_vector(15 downto 0);
 		
 		-- LEDs
-		led	    :	out	std_logic_vector(15 downto 0);
+		led	    :	out	std_logic_vector(15 downto 0)
 	);
 end top_basys3;
 
