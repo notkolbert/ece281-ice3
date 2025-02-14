@@ -49,8 +49,7 @@ entity top_basys3 is
 		sw		:	in  std_logic_vector(15 downto 0);
 		
 		-- LEDs
-		led	    :	out	std_logic_vector(3 downto 0);
-		light   :   out std_logic
+		led	    :	out	std_logic_vector(15 downto 0);
 	);
 end top_basys3;
 
@@ -86,11 +85,12 @@ begin
     S(1) => led(1),
     S(2) => led(2),
     S(3) => led(3),
-    Cout => light
+    Cout => led(15)
     );
     
 	---------------------------------
 	
 	-- CONCURRENT STATEMENTS --------
+	led(14 downto 4) <= (others => '0'); -- Ground unused LEDs
 	---------------------------------
 end top_basys3_arch;
